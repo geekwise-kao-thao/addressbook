@@ -3,9 +3,6 @@ var last_name_field = get_element('right_input_1');
 var company_name_field = get_element('right_input_2');
 var done_button = get_element('done_button');
 
-var new_contact_array = [];
-var split_string;
-
 var update_contact = function(){
     done_button.addEventListener('click',function(event){
         
@@ -14,7 +11,7 @@ var update_contact = function(){
         var company_name = company_name_field.value.length;
         
         if(first_name === 0 && last_name === 0 && company_name === 0){
-            alert('Please enter names in all fields.');
+            alert('Please enter names in all fields then click DONE.');
         }else{
             for(i in split_alphabet){
                 var current_letter = split_alphabet[i];
@@ -34,21 +31,10 @@ var update_contact = function(){
                 };
             };
             
-            var regex_new_names = new RegExp('\\w{1,}\\b','gi');
-            var regex_new_name_matches = new_contact_array[0].match(regex_new_names);
-            console.log(regex_new_name_matches);
-            
-            var capitalize_first_letter = function(word){
-                 var lower_to_upper = function(match){
-                     return match.toUpperCase();
-                 };
-                 //convert to self executing function lower_to_upper() at a later time;
-                 return word.replace(/\b\w/gi,lower_to_upper)
-            };
-            
-            var replace_array_item = function(array_name,array_position,new_array_content){
-                return array_name[array_position] = new_array_content;
-            };
+            /**
+             * for-loop: replace_array_item function calls for capitalize_first_letter function to replace
+             * first letter of each word in string from an array, in this case it's the new_contact_array.
+            */
             
             for(var i=0; i < new_contact_array.length; i++){
                 replace_array_item(
@@ -56,21 +42,36 @@ var update_contact = function(){
                 );
             };
             
-            console.log(new_contact_array);
+            console.log(new_contact_array); // leave it for demo purposes, delete after
             
+            // display empty field after done is clicked
             first_name_field.value = null;
             last_name_field.value = null;
             company_name_field.value = null;
             
+            /**
+             * UI: displays All Contact screen
+            */
             get_element('contact_container').style.display = 'inline-block';
             get_element('new_contact_container').style.display = 'none';
             
+            /** 
+             * UI: when plus is clicked, and New Contact screen is displayed, DONE button is greyed
+             */
             if(get_element('new_contact_container').style.display === 'none'){
-                done_button.style.color = '#BDBDBD'; //done button to turn grey again
+            done_button.style.color = '#BDBDBD'; //done button to turn grey again
             };
         };
     });
 };
+
+
+/**
+ * UI: DONE button changes color when there is an any entry in the first, last, and company name fields,
+ * and it changes back to lightgrey when the fields are empty.
+ * 
+ * Working for the first name field, but need to fix bug for last and company name fields.
+*/
 
 var click_on_first_name_field = function(){
     first_name_field.addEventListener('keydown',function(event){

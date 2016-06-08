@@ -35,7 +35,7 @@ var load = function(url,callback){
 /**  When DOM is loaded, call load function to create script tags in the head tag*/
 document.addEventListener('DOMContentLoaded',function(event){
     
-    load('controller.js',function(){
+    load('controller/controller.js',function(){
         
     });
     

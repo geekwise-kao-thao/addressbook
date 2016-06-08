@@ -1,3 +1,7 @@
+/**
+ * pre-populated names on the All Contact screen comes from this data.
+*/
+
 var alonzo = new contact_information('Alonzo','Yrigollen','EDC','(559) 111-1111','geekwise.alonzo.yrigollen@gmail.com');
 var j = new contact_information('J','Tablett','EDC','(559) 111-1112','geekwise.jennifer.tablett@gmail.com');
 var tiffany = new contact_information('Tiffany','Ranish','EDC','(559) 111-1113','geekwise.tiffany.ranish@gmail.com');
@@ -20,6 +24,10 @@ var contact_array = [
     sarah
 ];
 
+/**
+ * array of content for containers populated on the New Contact screen
+*/
+
 var add_info_array = [
     'add phone',
     'add email',
@@ -38,21 +46,27 @@ var add_info_array = [
     'add field'
 ];
 
-// array of content for containers after clicking on add phone
+/**
+ * array of content for containers after clicking on add phone
+*/
 
-    var label_array = [
-        'home',
-        'work',
-        'iphone',
-        'mobile',
-        'main',
-        'home fax',
-        'work fax',
-        'pager',
-        'other'
-    ];
+var label_array = [
+    'home',
+    'work',
+    'iphone',
+    'mobile',
+    'main',
+    'home fax',
+    'work fax',
+    'pager',
+    'other'
+];
 
-
+/**
+ * empty array, but when the done button is clicked after new contact is entered,
+ * first and last name will be pushed into this array as a string
+*/
+var new_contact_array = [];
 
 
 
