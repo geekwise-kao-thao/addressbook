@@ -92,4 +92,29 @@ var click_on_first_name_field = function(){
 
 
 
+// @Kao attempt new code for search field
+var search_field = get_element('search');
+//var header_letters = ('fixed_header');
+var names = getElementsByClassName('inner_contact_container');
 
+
+// search_field.addEventListener('keydown',function(event){
+  
+//   var regex_entry = new RegExp('^' + search_field.value + '.*|\w','gi');
+  
+    //for(var i=0; i<500; i++){
+    // var search_affect = function(){
+    //   if(search_field.value.length === 1){
+    //     get_element('letter_container_0').style.width = '10px';
+    //   };
+    // };
+    // search_affect();
+    //};
+// });
+
+// not sure why this is not working???
+search_field.addEventListener('click',function(event){
+    
+        get_element('letter_container_0').style.width = '10px';
+    
+});

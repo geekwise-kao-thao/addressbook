@@ -51,9 +51,13 @@ document.addEventListener('DOMContentLoaded',function(event){
         
     });
     
+    load('view/view.js',function() {
+        
+    });
+    
     load('view/view.update.js',function() {
-        update_contact();
-        click_on_first_name_field();
+        update_contact(); // when DONE button is clicked
+        click_on_first_name_field(); // Done button color change when first, last, and company fields are not empty
     });
     
     load('view/view.scroll.js',function() {
@@ -78,9 +82,9 @@ document.addEventListener('DOMContentLoaded',function(event){
 
     });
     
-    load('controller/create-name-containers.js',function() {
-    // function greyed out, not used (sample only):    create_name_containers();
-    });
+    // load('controller/create-name-containers.js',function() {
+    // // function greyed out, not used (sample only):    create_name_containers();
+    // });
     
 });
 

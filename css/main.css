@@ -85,6 +85,7 @@ input{
     float:left;
     margin:4% 0 0 2%;
     color:#0D7CE3;
+    visibility: hidden;
 }
 
 #top_row_element_1{
@@ -422,16 +423,67 @@ div[id^=chevron_container_]{
 }
 
 
+/* ================================
+
+   4.0  Contact Card Display Screen
+   
+   ================================ */
+
+.contact_cards{
+    background-color:blue;
+    width:40rem;
+    height:871px;
+    text-align: center;
+    position: relative;
+    top: -874px;
+    box-shadow: 3px 3px 5px 3px grey;
+}
+
+#contact_card > div{
+    width:100%;
+}
+
+#contact_card_top_row_container{
+    width:100%;
+    height:6.7rem;
+    font-size:2.2rem;
+    border-bottom: 1px solid #7E7D82;
+    background-color:#FFFFFF;
+    position: relative;
+    top: 0px;
+}
+
+#photo_container{
+    float:left;
+    height:10rem;
+    width:20%;
+}
+
+#name_container{
+    width:80%;
+    height:10rem;
+    font-size:2rem;
+}
+
+#photo_image{
+    background-color:#A9A9A9;
+    width:7rem;
+    height:7rem;
+    border-radius:100%;
+}
 
 /* ===============================
 
-   4.0  Colors
+   5.0  Colors
    
    =============================== */
 
 /*
 #BDBDBD = lightgrey (Done Button)
 #0D7CE3 = iphone sky blue
+#A9A9A9 = chevron symbol grey
+#7E7D82 = lighter black
+#F7F7F7 = top_row_container grey
 
 */
 

@@ -64,7 +64,7 @@ var label_array = [
 
 /**
  * empty array, but when the done button is clicked after new contact is entered,
- * first and last name will be pushed into this array as a string
+ * first and last name will be pushed into this array as a string, stored in the browser
 */
 var new_contact_array = [];
 

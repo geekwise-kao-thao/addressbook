@@ -124,9 +124,44 @@ create_containers('div','right_input_section_container_div',get_element('second_
     
     click_to_add_phone(); // click on add_phone and another container will pop up to add more info, eg. add home phone
     
-    create_containers('span','');
+    //create_containers('span','');
     
-    create_containers('input','note_container',get_element('input_container_13'));
+    create_containers('input','note_container',get_element('add_container_13'));
+    
     get_element('note_container').setAttribute('placeholder','Note');
+    
+    
+//  creating contact card
 
+create_containers('div','contact_card',document.body);
+create_containers('div','contact_card_top_row_container',get_element('contact_card'));
+create_containers('div','photo_and_name_container',get_element('contact_card'));
+create_containers('div','home_phone_container',get_element('contact_card'));
+create_containers('div','contact_card_note_container',get_element('contact_card'));
+create_containers('div','send_message',get_element('contact_card'));
+create_containers('div','share_contact',get_element('contact_card'));
+create_containers('div','add_to_favorite',get_element('contact_card'));
+
+create_multi_elements(2,'span','contact_card_top_row_element_',get_element('contact_card_top_row_container'));
+
+
+update_element_properties('contact_card_top_row_element_0','All Contacts','all_contact');
+update_element_properties('contact_card_top_row_element_1','Edit','edit');
+
+create_containers('div','photo_container',get_element('photo_and_name_container'));
+create_containers('div','name_container',get_element('photo_and_name_container'));
+
+create_containers('div','photo_image',get_element('photo_container'));
+get_element('name_container').textContent = 'Test Name';
+
+get_element('contact_card').setAttribute('class','contact_cards');
+//get_element('contact_card').textContent = 'jjjjjj';
+//get_element('contact_card').style.fontSize = '5rem';
+
+    
+    
+    
+    
+    
+    
     
