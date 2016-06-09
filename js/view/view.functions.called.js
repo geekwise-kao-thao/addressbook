@@ -142,19 +142,33 @@ create_containers('div','send_message',get_element('contact_card'));
 create_containers('div','share_contact',get_element('contact_card'));
 create_containers('div','add_to_favorite',get_element('contact_card'));
 
+create_containers('span','top_row_chevron',get_element('contact_card_top_row_container'));
 create_multi_elements(2,'span','contact_card_top_row_element_',get_element('contact_card_top_row_container'));
-
-
-update_element_properties('contact_card_top_row_element_0','All Contacts','all_contact');
-update_element_properties('contact_card_top_row_element_1','Edit','edit');
 
 create_containers('div','photo_container',get_element('photo_and_name_container'));
 create_containers('div','name_container',get_element('photo_and_name_container'));
 
 create_containers('div','photo_image',get_element('photo_container'));
-get_element('name_container').textContent = 'Test Name';
+
+create_containers('p','contact_card_home',get_element('home_phone_container'));
+create_containers('span','phone_fontawesome',get_element('home_phone_container'));
+
+create_containers('input','contact_card_notes',get_element('contact_card_note_container'));
 
 get_element('contact_card').setAttribute('class','contact_cards');
+get_element('top_row_chevron').setAttribute('class','fa fa-chevron-left blue');
+update_element_properties('contact_card_top_row_element_0','All Contacts','all_contact');
+update_element_properties('contact_card_top_row_element_1','Edit','edit');
+
+get_element('name_container').textContent = 'Test Name';
+get_element('contact_card_home').textContent = 'home';
+get_element('send_message').textContent = 'Send Message';
+get_element('share_contact').textContent = 'Share Contact';
+get_element('add_to_favorite').textContent = 'Add to Favorites';
+
+get_element('contact_card_home').setAttribute('class','blue');
+get_element('phone_fontawesome').setAttribute('class','fa fa-phone blue');
+
 //get_element('contact_card').textContent = 'jjjjjj';
 //get_element('contact_card').style.fontSize = '5rem';
 
