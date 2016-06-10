@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded',function(event){
     });
     
     load('view/view.search.js',function() {
-        
+        search_filter();
     });
     
     // === may use this when refactoring handler functions === //

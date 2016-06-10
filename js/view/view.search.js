@@ -21,3 +21,61 @@
 //   });
 // })();
 
+//keycode a=65, b=66, c==67, and so on for d -> z (z=90)
+
+
+var search_filter = function(){
+  
+  get_element('search').addEventListener('keyup',function(event){
+    
+    if(event.keyCode === 65){
+      for(var i=0; i<26; i++){
+          get_element('abc_container_'+i).style.display = 'none';
+          
+          if(this.value === 'a'){
+            get_element('abc_container_0').style.display = 'inline-block';
+          };
+      };
+    };
+    
+    if(event.keyCode === 66){
+      for(var i=0; i<26; i++){
+          get_element('abc_container_'+i).style.display = 'none';
+          
+          if(this.value === 'b'){
+            get_element('abc_container_1').style.display = 'inline-block';
+          };
+      };
+    };
+    
+    if(event.keyCode === 67){
+      for(var i=0; i<26; i++){
+          get_element('abc_container_'+i).style.display = 'none';
+          
+          if(this.value === 'c'){
+            get_element('abc_container_2').style.display = 'inline-block';
+          };
+      };
+    };
+  });
+};
+
+get_element('search').addEventListener('keyup',function(event){
+  
+  if(event.keyCode === 8){
+    for(var i=0; i<26; i++){
+      if(get_element('search').value.length === 0){
+        get_element('abc_container_'+i).style.display = 'inline-block';
+      };
+    };
+  };
+});
+
+
+
+
+
+
+
+
+
