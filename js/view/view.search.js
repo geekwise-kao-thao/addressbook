@@ -22,11 +22,20 @@
 // })();
 
 //keycode a=65, b=66, c==67, and so on for d -> z (z=90)
+var search_regex = new RegExp('^'+input_value, "gi");
 
+var search_value = get_element('search').value.match(search_regex);
+// var element_inner_html = function(){
+//   for(var i=0; i<26; i++){
+//     get_element('abc_container_'+i).children.innerHTML.match(search_regex);
+//   };
+// };
 
 var search_filter = function(){
   
   get_element('search').addEventListener('keyup',function(event){
+    
+    
     
     if(event.keyCode === 65){
       for(var i=0; i<26; i++){

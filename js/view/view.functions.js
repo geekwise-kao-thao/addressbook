@@ -217,3 +217,15 @@ var click_to_add_phone = function(){
         };
     });
 };
+
+var adjust_textarea = function(){
+    
+    get_element('contact_card_notes').addEventListener('keyup',function(event){
+        
+        get_element('contact_card_notes').style.height = "1px";
+        
+        setTimeout(function() {
+            get_element('contact_card_notes').style.height = (get_element('contact_card_notes').scrollHeight)+"px";
+        }, 1);
+    });
+}
