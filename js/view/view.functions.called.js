@@ -131,54 +131,7 @@ create_containers('div','right_input_section_container_div',get_element('second_
     get_element('note_container').setAttribute('placeholder','Note');
     
     
-//  creating contact card
-
-create_containers('div','contact_card',document.body);
-create_containers('section','contact_card_top_row_container',get_element('contact_card'));
-create_containers('div','photo_and_name_container',get_element('contact_card'));
-create_containers('div','home_phone_container',get_element('contact_card'));
-create_containers('div','contact_card_note_container',get_element('contact_card'));
-create_containers('div','send_message',get_element('contact_card'));
-create_containers('div','share_contact',get_element('contact_card'));
-create_containers('div','add_to_favorite',get_element('contact_card'));
-
-create_containers('span','top_row_chevron',get_element('contact_card_top_row_container'));
-create_multi_elements(2,'span','contact_card_top_row_element_',get_element('contact_card_top_row_container'));
-
-create_containers('div','photo_container',get_element('photo_and_name_container'));
-create_containers('div','name_container',get_element('photo_and_name_container'));
-
-create_containers('div','photo_image',get_element('photo_container'));
-
-create_containers('p','contact_card_home',get_element('home_phone_container'));
-create_containers('span','phone_number',get_element('home_phone_container'));
-create_containers('span','phone_fontawesome',get_element('home_phone_container'));
-
-create_containers('p','notes',get_element('contact_card_note_container'));
-create_containers('textarea','contact_card_notes',get_element('contact_card_note_container'));
-
-get_element('contact_card').setAttribute('class','contact_cards');
-get_element('top_row_chevron').setAttribute('class','fa fa-chevron-left blue');
-update_element_properties('contact_card_top_row_element_0','All Contacts','all_contact');
-update_element_properties('contact_card_top_row_element_1','Edit','edit');
-
-get_element('name_container').textContent = 'Test Name';
-get_element('contact_card_home').textContent = 'home';
-get_element('phone_number').textContent = '(559) 123-4567';
-get_element('notes').textContent = 'Notes';
-get_element('contact_card_notes').setAttribute('rows','1000');
-get_element('contact_card_notes').setAttribute('cols','26');
-get_element('send_message').textContent = 'Send Message';
-get_element('share_contact').textContent = 'Share Contact';
-get_element('add_to_favorite').textContent = 'Add to Favorites';
-
-get_element('contact_card_home').setAttribute('class','blue');
-get_element('phone_fontawesome').setAttribute('class','fa fa-phone blue');
-
-adjust_textarea();
-
-//get_element('contact_card').textContent = 'jjjjjj';
-//get_element('contact_card').style.fontSize = '5rem';
+create_contact_card();
 
     
     
