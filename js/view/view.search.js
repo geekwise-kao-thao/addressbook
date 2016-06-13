@@ -22,48 +22,38 @@
 // })();
 
 //keycode a=65, b=66, c==67, and so on for d -> z (z=90)
-var search_regex = new RegExp('^'+input_value, "gi");
-
-var search_value = get_element('search').value.match(search_regex);
-// var element_inner_html = function(){
-//   for(var i=0; i<26; i++){
-//     get_element('abc_container_'+i).children.innerHTML.match(search_regex);
-//   };
-// };
+var search_regex = new RegExp('^'+get_element('search').value, "gi");
+ 
 
 var search_filter = function(){
   
   get_element('search').addEventListener('keyup',function(event){
     
-    
-    
-    if(event.keyCode === 65){
+    if(this.value === 'a'){
       for(var i=0; i<26; i++){
           get_element('abc_container_'+i).style.display = 'none';
-          
-          if(this.value === 'a'){
-            get_element('abc_container_0').style.display = 'inline-block';
-          };
+          get_element('abc_container_0').style.display = 'inline-block';
       };
     };
     
-    if(event.keyCode === 66){
+    if(this.value === 'b'){
       for(var i=0; i<26; i++){
           get_element('abc_container_'+i).style.display = 'none';
-          
-          if(this.value === 'b'){
-            get_element('abc_container_1').style.display = 'inline-block';
-          };
+          get_element('abc_container_1').style.display = 'inline-block';
       };
     };
     
-    if(event.keyCode === 67){
+    if(this.value === 'c'){
       for(var i=0; i<26; i++){
           get_element('abc_container_'+i).style.display = 'none';
-          
-          if(this.value === 'c'){
-            get_element('abc_container_2').style.display = 'inline-block';
-          };
+          get_element('abc_container_2').style.display = 'inline-block';
+      };
+    };
+    
+    if(this.value === 'd'){
+      for(var i=0; i<26; i++){
+          get_element('abc_container_'+i).style.display = 'none';
+          get_element('abc_container_3').style.display = 'inline-block';
       };
     };
   });
