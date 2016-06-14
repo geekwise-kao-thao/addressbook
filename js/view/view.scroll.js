@@ -120,29 +120,30 @@ get_element('names_container').addEventListener('scroll',function(event){
          get_element('letter_container_0').style.width = '35.4rem';
          get_element('abc_container_0').style.marginTop = '50px';
          
-         var logo = document.getElementById('letter_container_1');
+         var logo = document.getElementById('abc_container_1');
+         
          var logoTextRectangle = logo.getBoundingClientRect();
          
          if(logoTextRectangle.top <= 235){
              get_element('letter_container_0').style.position = 'relative';
              get_element('letter_container_0').style.top = '0';
              get_element('abc_container_0').style.marginTop = '0';
-             
-
-
          };
+         
          if(logoTextRectangle.top === 181){//use the container instead of the element to release when offset is less than...
              get_element('letter_container_1').style.position = 'fixed';
              get_element('letter_container_1').style.top = '181px';
              get_element('letter_container_1').style.left = '79px';
              get_element('letter_container_1').style.width = '35.4rem';
              get_element('abc_container_1').style.marginTop = '50px';
-         }else{};
+         }else{
+             get_element('letter_container_1').style.position = 'fixed';
+         };
          
          
     
 
-console.log("logo's top pos.:", logoTextRectangle.top);
+//console.log("logo's top pos.:", logoTextRectangle.top);
 //console.log("logo's right pos.:", logoTextRectangle.right);
 });
 
