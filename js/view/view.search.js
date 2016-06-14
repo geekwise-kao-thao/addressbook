@@ -1,75 +1,8 @@
-// var contact_names = document.getElementsByClassName( 'inner_contact_container' );
-// var active_names = [];
-
-// var clear_array_values = function (array_name){
-  
-//     return array_name.length = 0;
-  
-// };
-
-// var search_filter = function(){
-//   get_element('search').addEventListener('keyup',function(event){
-    
-//     var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-    
-//     /* Setting all containers with names to have a data-type attribute declaring it activive or inactive, see also line 31 */
-//     for(var i=0; i < contact_names.length; i++){
-//         contact_names[i].setAttribute( 'data-search-status','inactive');
-//     };
-    
-//     /* e.g. if this.value is 'a' then it will match the array 'a', then indexOf will be '0' */
-//     if(alphabet.indexOf(this.value) >= 0) {
-      
-//       /* Grabbing the particular container you desire based on what you enter in the search field */
-//       var active_name_container = get_element('abc_container_' + alphabet.indexOf(this.value));
-       
-//       /**
-//       * Go through each letter of the array and display it none except for the container which starts with the letter 
-//       * that matches the search field value
-//       */
-//       alphabet.forEach(function(letter){
-//           get_element('abc_container_' + alphabet.indexOf(letter) ).style.display = 'none';
-//       });
-      
-//       /* Taking the desired container based on what was entered in the search field and display that one only*/
-//       active_name_container.style.display = 'inline-block';
-        
-//       for(var i=0; i < active_name_container.childElementCount; i++){
-//             if(i !== 0){
-//               active_name_container.childNodes[i].setAttribute('data-search-status' ,'active');
-              
-//             };
-//         };
-//     };
-  
-//     clear_array_values(active_names);//?????????
-    
-//     var search_value = '^' + this.value;
-//     var regex_pattern = new RegExp(search_value,'gi');
-    
-//     console.log(regex_pattern);
-             
-//     for(var i=0; i< contact_names.length; i++){
-//         if( contact_names[i].getAttribute('data-search-status') === 'active' && 
-//             regex_pattern.test( contact_names[i].textContent )
-//         ){
-//             console.log(contact_names[i]);
-//             contact_names[i].style.backgroundColor = '#CAC9CE';
-//         }else if(contact_names[i].getAttribute('data-search-status') === 'inactive'){
-//             contact_names[i].style.backgroundColor = '#ffffff';
-//         };
-//     };      
-//   });
-// };// End of search filter function
-
-
 var contact_names = document.getElementsByClassName( 'inner_contact_container' );
 var active_names = [];
 var active_name_text = [];
 var clear_array_values = function (array_name){
-  
     return array_name.length = 0;
-  
 };
 
 var search_filter = function(){
@@ -105,7 +38,6 @@ var search_filter = function(){
             
             if(i !== 0){
               active_name_container.childNodes[i].setAttribute('data-search-status' ,'active');
-              
             };
         };
     };
@@ -115,16 +47,12 @@ var search_filter = function(){
     clear_array_values( active_name_text );         
     
     for(var i=0; i< contact_names.length; i++){
-      
         if( contact_names[i].getAttribute('data-search-status') === 'active' ){
-        
-            console.log(contact_names[i]);
             active_names.push( contact_names[i] ); 
         };
     };
     
     if(this.value.length > 0){
-        
         var search_value = '^' + this.value;
         var regex_pattern = new RegExp(search_value,'gi');
         
