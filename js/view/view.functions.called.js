@@ -87,16 +87,9 @@ create_containers('div','right_input_section_container_div',get_element('second_
     
     cancel_button().textContent = 'Cancel';
     
-    var click_top_cancel_button = function(){
-        cancel_button().addEventListener('click',function(event){
-           get_element('contact_container').style.display = 'inline-block';
-           if(get_element('contact_container').style.display === 'inline-block'){
-               get_element('new_contact_container').style.display = 'none';
-           };
-        });
-    };
-    
     click_top_cancel_button();
+    
+    // will work on this after done function is updated: click_on_name();
     
 /** Creating input elements for:  First Name, Last Name, and Company*/    
 

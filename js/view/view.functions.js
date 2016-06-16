@@ -73,6 +73,35 @@ var click_plus_button = function(){
         });
     };
 
+/**
+ * Clicking this cancel buttonn will clear input values and take the user back to All Contact screen
+*/
+var click_top_cancel_button = function(){
+    cancel_button().addEventListener('click',function(event){
+        
+       var first_last_company = document.getElementsByClassName('first_last_company');
+       
+       for(var i=0; i<3; i++){
+           if(get_element('right_input_'+i).value.length >= 0){
+                first_last_company[i].value = null;
+           }
+       };
+       
+       get_element('contact_container').style.display = 'inline-block';
+       if(get_element('contact_container').style.display === 'inline-block'){
+           get_element('new_contact_container').style.display = 'none';
+       };
+       
+       
+       
+    });
+};
+
+// var click_on_name = function(){
+    
+//     //when a name on the all contact screen is clicked, display the contact card with the individual's name
+// };
+
 /**adding text content to containers, visible next to plus symbol*/
 var add_text_content = function (){
     for(var i=0; i<add_info_array.length; i++){

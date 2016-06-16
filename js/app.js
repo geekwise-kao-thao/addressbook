@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded',function(event){
         click_on_first_name_field(); // Done button color change when first, last, and company fields are not empty
     });
     
-    // load('view/view.scroll.js',function() {
+    load('view/view.scroll.js',function() {
         
-    // });
+    });
     
     load('view/view.search.js',function() {
         search_filter();

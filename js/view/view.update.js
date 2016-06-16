@@ -38,6 +38,7 @@ var update_contact = function(){
             };
             
             if(get_element('phone_input_0').value.length >= 0){
+                new_contact_home_phone_number.push(get_element('phone_input_0').value);
                 get_element('phone_number').textContent = get_element('phone_input_0').value;
                 get_element('phone_input_0').value = null;
             }
