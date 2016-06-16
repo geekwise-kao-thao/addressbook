@@ -1,0 +1,55 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+.followMeBar {
+  background: #999;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.followMeBar.fixed {
+  position: fixed;
+  top: 200px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+.followMeBar.fixed.absolute {
+  position: absolute;
+  display:none;
+}
+/* For aesthetics only */
+
+body {
+  margin: 0;
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+}
+
+#container{
+  position:relative;
+  top:200px;
+  z-index:999;
+}
+
+.intro {
+  padding: 40px;
+  background-color:yellow;
+  position:fixed;
+  left:0;
+  top:0;
+}
+
+.intro h1 {
+  font: 200 1.7em Segoe UI, "Segoe UI Light", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+  font-weight: 200;
+  color: #666;
+}
+
+.intro p {
+  max-width: 600px;
+}

@@ -6,6 +6,8 @@ var done_button = get_element('done_button');
 var update_contact = function(){
     done_button.addEventListener('click',function(event){
         
+        create_contact_card();
+        
         var first_name = first_name_field.value.length;
         var last_name = last_name_field.value.length;
         var company_name = company_name_field.value.length;
@@ -13,6 +15,7 @@ var update_contact = function(){
         if(first_name === 0 && last_name === 0 && company_name === 0){
             alert('Please enter names in all fields then click DONE.');
         }else{
+            
             for(i in split_alphabet){
                 var current_letter = split_alphabet[i];
                 var current_abc_container = document.getElementById('abc_container_'+i);
@@ -23,16 +26,24 @@ var update_contact = function(){
                 if(first_name_field.value.match(regex_pattern)){
                     var new_contact_container = document.createElement('p');
                     new_contact_container.setAttribute('class','inner_contact_container');
-                    new_contact_container.textContent = first_name_field.value + ' ' + last_name_field.value;
-                    new_contact_array.push(new_contact_container.textContent);
+                    new_contact_array.push(first_name_field.value + ' ' + last_name_field.value);
                     current_abc_container.appendChild(new_contact_container);
+                    
+                    get_element('contact_card').style.display = 'inline-block';
+                    
+                    
                 }else{
                     
                 };
             };
             
+            if(get_element('phone_input_0').value.length >= 0){
+                get_element('phone_number').textContent = get_element('phone_input_0').value;
+                get_element('phone_input_0').value = null;
+            }
+            
             /**
-             * for-loop: replace_array_item function calls for capitalize_first_letter function to replace
+             * for-loop: replace_array_item function calls for capitalize_first_letter function from controller.js to replace
              * first letter of each word in string from an array, in this case it's the new_contact_array.
             */
             
@@ -40,6 +51,17 @@ var update_contact = function(){
                 replace_array_item(
                     new_contact_array,i,capitalize_first_letter( new_contact_array[i])
                 );
+            };
+            
+            /**
+             * After names in new_contact_array are capitalized, make them as text content displaying on the All Contact screen
+             * and on the Contact Card screen
+            */
+            
+            for(var i=0; i<new_contact_array.length; i++){
+                new_contact_container.textContent = new_contact_array[new_contact_array.length-1];
+                console.log(new_contact_array[new_contact_array.length-1]);
+                get_element('name_container').textContent = new_contact_array[new_contact_array.length-1];
             };
             
             console.log(new_contact_array); // leave it for demo purposes, delete after

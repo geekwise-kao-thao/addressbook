@@ -131,7 +131,7 @@ create_containers('div','right_input_section_container_div',get_element('second_
     get_element('note_container').setAttribute('placeholder','Note');
     
     
-create_contact_card();
+
 
     
     

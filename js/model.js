@@ -68,5 +68,9 @@ var label_array = [
 */
 var new_contact_array = [];
 
+var contact_card_array = [];// Not sure if this array was used, may delete later
+
+var new_contact_home_phone_number = [];// Phone number entered in this input will be displayed in individual contact card
+
 
 

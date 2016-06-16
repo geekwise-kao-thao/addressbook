@@ -35,6 +35,12 @@ var click_search = function(){
 /**when cancel button is clicked, it will display as none and search field width will increase*/
 var click_cancel_button = function(){
     get_element('search_cancel').addEventListener('click',function(){
+       
+       var names = document.getElementsByClassName('inner_contact_container');
+       for(var i=0; i<names.length; i++){
+           names[i].style.backgroundColor = '#ffffff';
+       };
+       
        this.style.display = 'none';
        
        get_element('search').style.width = '95%';
@@ -43,7 +49,17 @@ var click_cancel_button = function(){
        if(get_element('search').style.width === '95%'){
            get_element('search_icon').style.transition = '0s';
            get_element('search').style.float = 'none';
-       };    
+       }; 
+       
+       get_element('search').value = null;
+       
+       for(var i=0; i<26; i++){
+          if(get_element('search').value.length === 0){
+            get_element('abc_container_'+i).style.display = 'inline-block';
+          };
+       };
+       
+       
     });
 };
 
@@ -272,6 +288,7 @@ var create_contact_card = function(){
     update_element_properties('contact_card_top_row_element_1','Edit','edit');
     
     get_element('name_container').textContent = 'Test Name';
+    
     get_element('contact_card_home').textContent = 'home';
     get_element('phone_number').textContent = '(559) 123-4567';
     get_element('notes').textContent = 'Notes';
