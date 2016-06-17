@@ -572,3 +572,24 @@ div#photo_and_name_container {
 */
 
 
+/*===================================== scroll feature ======================================*/
+
+.sticky{
+    position:fixed;
+    top:181px;
+    width:59.1%;
+}
+
+.parent_margin_top{
+    margin-top: 55px;
+}
+
+.non_sticky{
+    position:absolute;
+    top:40px;
+    width:100%;
+}
+
+.parent_fixed{
+    position:fixed;
+}

@@ -11,6 +11,23 @@ var juston = new contact_information('Juston','Miller','EDC','(559) 111-1116','g
 var mark = new contact_information('Mark','Thomas','EDC','(559) 111-1116','mark.thomas.miller@gmail.com'); 
 var bob = new contact_information('Bob','Brettson','EDC','(559) 111-1116','mark.thomas.miller@gmail.com'); 
 var sarah = new contact_information('Sarah','Smith','EDC','(559) 111-1116','mark.thomas.miller@gmail.com'); 
+var carol = new contact_information('Carol','Acosta','EDC');
+var donald = new contact_information('Donald');
+var edgar = new contact_information('Edgar');
+var fred = new contact_information('Fred');
+var gary = new contact_information('Gary');
+var hero = new contact_information('Hero');
+var igloo = new contact_information('Igloo');
+var kao = new contact_information('Kao');
+var larry = new contact_information('Larry');
+var octopus = new contact_information('Octopus');
+var peter = new contact_information('Peter');
+var query = new contact_information('Query');
+var robert = new contact_information('Robert');
+var uber = new contact_information('Uber');
+var xray = new contact_information('Xray');
+var zebra = new contact_information('Zebra');
+
 
 var contact_array = [
     alonzo,
@@ -21,7 +38,23 @@ var contact_array = [
     j,
     mark,
     bob,
-    sarah
+    sarah,
+    carol,
+    donald,
+    edgar,
+    fred,
+    gary,
+    hero,
+    igloo,
+    kao,
+    larry,
+    octopus,
+    peter,
+    query,
+    robert,
+    uber,
+    xray,
+    zebra
 ];
 
 /**
