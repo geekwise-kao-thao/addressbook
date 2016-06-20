@@ -120,7 +120,7 @@ var create_abc_containers = function(){
         var abc_container = document.getElementById('abc_container_' + i);
         var letter_container = document.createElement('p');
         letter_container.setAttribute('id','letter_container_'+i);
-        letter_container.setAttribute('class','fixed_header');
+        letter_container.setAttribute('class','fixed_header letter_containers');
         letter_container.textContent = split_alphabet[i];
         
         abc_container.appendChild(letter_container); 
@@ -145,10 +145,12 @@ var create_inner_contact_container = function(){
         for(i in contact_array){
             current_letter = current_letter.toLowerCase();
             var regex_pattern = new RegExp('^' + current_letter + '.*|\w','gi');
+            var re = /see (Undefined)/i;
             
             if(contact_array[i].first_name.match(regex_pattern)){
                 var inner_contact_container = document.createElement('p');
                 inner_contact_container.setAttribute('class','inner_contact_container');
+                
                 inner_contact_container.textContent = contact_array[i].first_name + ' ' + contact_array[i].last_name;
                 
                 current_abc_container.appendChild(inner_contact_container);
@@ -336,7 +338,6 @@ var create_contact_card = function(){
     back_to(get_element('all_contact'),get_element('contact_card'),get_element('new_contact_container'),get_element('contact_container'));
     
     back_to(get_element('edit'),get_element('contact_card'),get_element('contact_container'),get_element('new_contact_container'));
-
 };
 
 

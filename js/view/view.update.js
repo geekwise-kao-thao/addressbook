@@ -97,6 +97,7 @@ var update_contact = function(){
 */
 
 var click_on_first_name_field = function(){
+    
     first_name_field.addEventListener('keydown',function(event){
         for(var i=0; i<500; i++){
             if(event.keyCode === i && event.keyCode != 8){
@@ -111,9 +112,6 @@ var click_on_first_name_field = function(){
         };
     });
 };
-
-
-
 
 // @Kao attempt new code for search field
 var search_field = get_element('search');

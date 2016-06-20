@@ -168,7 +168,7 @@ div[id^=abc_container_]{
     padding-bottom: .5rem;
 }
 
-p[id^=letter_container_]{
+.letter_containers{
     background-color:#F7F7F7;
     font-weight: bold;
     padding-left: 2rem;
@@ -574,7 +574,8 @@ div#photo_and_name_container {
 
 /*===================================== scroll feature ======================================*/
 
-.sticky{
+
+.fixed{
     position:fixed;
     top:181px;
     width:59.1%;
@@ -584,12 +585,28 @@ div#photo_and_name_container {
     margin-top: 55px;
 }
 
-.non_sticky{
+.parent_margin_top_two{
+    margin-top:0;
+}
+
+.absolute{
     position:absolute;
-    top:40px;
+    top:38px;
     width:100%;
 }
 
 .parent_fixed{
     position:fixed;
 }
+
+.parent_relative{
+    position:relative;
+}
+
+.static{
+    position: static;
+}
+
+
+
+
