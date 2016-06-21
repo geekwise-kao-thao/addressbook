@@ -31,7 +31,6 @@ var update_contact = function(){
                     
                     get_element('contact_card').style.display = 'inline-block';
                     
-                    
                 }else{
                     
                 };
@@ -86,6 +85,14 @@ var update_contact = function(){
             };
         };
     });
+    
+    // var remove_handler = function(){
+    //     done_button.removeEventListener('click')
+    // };
+    
+    // if(get_element('contact_card').style.display === 'inline-block'){
+        
+    // };
 };
 
 
